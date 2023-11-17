@@ -38,11 +38,10 @@ $result = mysqli_query($con, $query);
                                         <th scope="col" class="px-3 py-3.5 text-center text-sm font-semibold text-gray-900">fullName</th>
                                         <th scope="col" class="px-3 py-3.5 text-center text-sm font-semibold text-gray-900">email</th>
                                         <th scope="col" class="px-3 py-3.5 text-center text-sm font-semibold text-gray-900">role</th>
-                                        <th scope="col" class="px-3 py-3.5 text-center text-sm font-semibold text-gray-900">team</th>
                                         <th scope="col" class="px-3 py-3.5 text-center text-sm font-semibold text-gray-900">status</th>
-                                        <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-6 lg:pr-8">
-                                            <span class="sr-only">Edit</span>
-                                        </th>
+                                        <th scope="col" class="px-3 py-3.5 text-center text-sm font-semibold text-gray-900">team</th>
+                                        <th scope="col" class="px-3 py-3.5 text-center text-sm font-semibold text-gray-900">create at </th>
+
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -56,7 +55,6 @@ $result = mysqli_query($con, $query);
                                             <td class="text-center"><?php echo $row['prenom'] ?></td>
                                             <td class="text-center"><?php echo $row['email'] ?></td>
                                             <td class="text-center"><?php echo $row['role'] ?></td>
-                                            <td class="text-center"><?php echo $row['equipe'] ?></td>
                                             <td class="text-center"><?php echo $row['statut'] ?></td>
                                              <td class="text-center"><?php echo $row['nom_de_equipe'] ?></td>
                                             <td class="text-center"><?php echo $row['date_de_creation'] ?></td>
@@ -72,6 +70,5 @@ $result = mysqli_query($con, $query);
             </div>
         </div>
     </div>
-    
 </body>
 </html>
