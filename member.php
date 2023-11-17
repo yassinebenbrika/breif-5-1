@@ -14,8 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     VALUES ('$phoneNumber', '$firstName', '$lastName', '$email', '$role', '$status', '$team')";
     mysqli_query($con, $insertQuery);
 
-    // Redirect to prevent form resubmission
-    header("Location: {$_SERVER['PHP_SELF']}");
+    header("Location: member.php");
     exit();
 }
 
