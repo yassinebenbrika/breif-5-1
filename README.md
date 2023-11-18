@@ -36,3 +36,6 @@ CREATE TABLE equipe (
     equipe VARCHAR(255) NOT NULL,
     statut VARCHAR(255) NOT NULL
 );
+
+
+
