@@ -2,12 +2,6 @@
 DataWare, une entreprise innovante désireuse de révolutionner sa gestion du personnel, a choisi votre équipe pour mener à bien une mission cruciale. Votre mandat consiste à concevoir une interface conviviale exploitant les langages PHP et SQL pour répondre de manière optimale à leurs exigences en matière de gestion des ressources humaines.
 ### Objectif du Projet
 L'objectif principal de ce projet est de concevoir un système de gestion des ressources humaines pour DataWare. Cela implique la création d'une interface utilisateur conviviale et d'une base de données robuste pour stocker et gérer les informations relatives aux équipes et aux membres du personnel.
-
-# Deleciuos-food
-
-## INTRODUCTION À Deleciuos-food
-DataWare, une entreprise innovante désireuse de révolutionner sa gestion du personnel, a choisi votre équipe pour mener à bien une mission cruciale. Votre mandat consiste à concevoir une interface conviviale exploitant les langages PHP et SQL pour répondre de manière optimale à leurs exigences en matière de gestion des ressources humaines.
-
 ## Comment utiliser
 * Clonez ce référentiel sur votre machine locale à l'aide de git clone.
 * Ouvrez les fichiers HTML dans votre navigateur Web pour naviguer à travers les différentes pages.
