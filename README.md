@@ -17,3 +17,22 @@ https://lucid.app/lucidchart/128ad176-b9b2-4212-ac70-e8e7af514956/edit?viewport_
 https://github.com/yassinebenbrika/breif-5-1
 ## cette mon table affichage
 http://localhost/breif-5/member.php
+## create equipe table
+CREATE TABLE equipe (
+    id_equipe INT AUTO_INCREMENT PRIMARY KEY,
+    nom_de_equipe VARCHAR(255) NOT NULL,
+    date_de_creation DATE NOT NULL
+);
+## create member table
+CREATE TABLE equipe (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nom_de_equipe VARCHAR(255) NOT NULL,
+    date_de_creation DATE NOT NULL,
+    telephone INT,
+    nom VARCHAR(255) NOT NULL,
+    prenom VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    role VARCHAR(255) NOT NULL,
+    equipe VARCHAR(255) NOT NULL,
+    statut VARCHAR(255) NOT NULL
+);
