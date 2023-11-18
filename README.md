@@ -19,7 +19,7 @@ CREATE TABLE equipe (
 );
 ## create member table
 CREATE TABLE equipe (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,<br>
     nom_de_equipe VARCHAR(255) NOT NULL,
     date_de_creation DATE NOT NULL,
     telephone INT,
