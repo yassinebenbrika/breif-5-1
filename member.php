@@ -1,16 +1,21 @@
 <?php
-require_once('config/db.php');
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    //the conction with the data base
+        $con =mysqli_connect("localhost","root","","mydatabase");
+        if(!$con){
+        die("Connection failed: " . mysqli_connect_error());
+        }
+    //This line checks if the request method is POST. It ensures that the following code block is lanched 
+    //only when a form is submitted using the POST method.
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check if it's a delete request
     if (isset($_POST['deleteId'])) {
         $deleteId = $_POST["deleteId"];
         $deleteQuery = "DELETE FROM member WHERE id = '$deleteId'";
+        //This line lanch the delete query using the mysqli_query function and stores the result in the $result variable
         $result = mysqli_query($con, $deleteQuery);
 
         if ($result) {
             header("Location: member.php"); 
-            exit();
         } else {
             echo "Error deleting user: " . mysqli_error($con);
         }
@@ -27,14 +32,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         VALUES ('$phoneNumber', '$firstName', '$lastName', '$email', '$role', '$status', '$team')";
         mysqli_query($con, $insertQuery);
 
-        
+        header("Location: member.php");
     }
-    header("Location: member.php");
-        exit();
 }
 
-$query = "SELECT * FROM member INNER JOIN equipe ON member.equipe = equipe.id_equipe";
-$result = mysqli_query($con, $query);
+    // Fetch data by performing an INNER JOIN between the 'member' and 'equipe' tables
+    // based on the condition that the 'equipe' column in the 'member' table matches the 'id_equipe' column in the 'equipe' table.
+    $query = "SELECT * FROM member INNER JOIN equipe ON member.equipe = equipe.id_equipe";
+
+    // Execute the SQL query and store the result in the $result variable.
+    // This result can be used to fetch and process the data retrieved from the database.
+    $result = mysqli_query($con, $query);
+
 ?>
 
 <!DOCTYPE html>
@@ -62,7 +71,7 @@ $result = mysqli_query($con, $query);
                                 <thead class="bg-gray-50">
                                     <tr>
                                         <th scope="col" class="py-3.5 pl-4 pr-3 text-center text-sm font-semibold text-gray-900 sm:pl-6 lg:pl-8">id</th>
-                                        <th scope="col" class="px-3 py-3.5 text-center text-sm font-semibold text-gray-900">phoneNumber</th>
+                                        <th scope="col" class="mdpx-3 py-3.5 text-center text-sm font-semibold text-gray-900">phoneNumber</th>
                                         <th scope="col" class="px-3 py-3.5 text-center text-sm font-semibold text-gray-900">firstName</th>
                                         <th scope="col" class="px-3 py-3.5 text-center text-sm font-semibold text-gray-900">lastName</th>
                                         <th scope="col" class="px-3 py-3.5 text-center text-sm font-semibold text-gray-900">email</th>
